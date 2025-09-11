@@ -2,5 +2,5 @@
   font-family: "Poppins";
   font-style: normal;
   font-weight: 300;
-  src: url ("/fonts/Poppins-Regular.ttf") format("truetype");
+  src: url (/Users/joshsharpnack/Downloads/Istok_Web,Poppins,Ubuntu/Poppins/Poppins-Regular.ttf") format("truetype");
 }

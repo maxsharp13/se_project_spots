@@ -1,5 +1,7 @@
 # Project 3: Spots
 
+https://github.com/maxsharp13/se_project_spots
+
 ### Overview  
 
 * Intro  
