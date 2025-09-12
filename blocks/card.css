@@ -1,48 +1,30 @@
 .card {
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.2s ease;
-  }
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
 
-  .cards__list {     /* I change the class from cards to card and it messes up the display I do not know why*/
-    list-style: none;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 0;
-    margin: 0 auto;
-    width: 100%;
-  }
+.card:hover {
+  transform: scale(1.02);
+}
 
-  .card:hover {
-    transform: scale(1.02);
-  }
+.card__image {
+  width: 413px;
+  height: 445px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
 
-  .card__image {
-    width: 413px;
-    height: 445px;
-    object-fit: cover;
-    display: block;
-  }
+.card__content {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin-top: 12px;
+  background: transparent;
+}
 
-  .card__content {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin-top: 12px;
-    background: transparent;
-  }
-
-  .card__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 6px;
-    flex: 1;
-    max-width: 80%;
-  }
-
-  .card__title {
+.card__title {
   margin: 0;
   font-size: 20px;
   font-weight: 500;
@@ -51,29 +33,24 @@
   overflow: hidden;
   font-weight: normal;
   color: #212121;
+  max-width: 353px;
+}
+
+.card__like-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  transition: transform 0.2s ease;
+  opacity: 0.4;
+  background-image: url("../images/Like\ Icon.svg");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  width: 23px;
+  height: 20px;
   }
 
-  .card__like-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    line-height: 1;
-    transition: transform 0.2s ease;
-  }
-
-  .card__like-button:hover {
-    transform: opacity(1.2);
-  }
-
-  @media screen and (min-width: 630px) and (max-width: 1319px) {
-    .cards__list {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media screen and (min-width: 1320px) {
-    .cards__list {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
+.card__like-button:hover {
+  transform: opacity(1);
+}

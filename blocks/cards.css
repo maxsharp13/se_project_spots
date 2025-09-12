@@ -1,14 +1,25 @@
 .cards {
-  padding: 20px;
+  padding: 20px 0 40px;
   border-bottom: 1px solid #e0e0e0;
 }
 
-.cards__list {     /* I change the class from cards to card and it messes up the display I do not know why*/
+.cards__list {
   list-style: none;
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, 413px);
+  justify-content: center;
+  gap: 40px 20px;
   padding: 0;
   margin: 0 auto;
-  width: 100%;
+}
+
+@media screen and (max-width: 627px) {
+  .cards {
+    padding-bottom: 20px;
+  }
+
+  .cards__list {
+    grid-template-columns: repeat(auto-fit, 288px);
+    gap: 20px;
+  }
 }
