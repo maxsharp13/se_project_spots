@@ -1,23 +1,22 @@
 # Project 3: Spots
 
-https://github.com/maxsharp13/se_project_spots
-
 ### Overview  
 
 * Intro  
 * Figma  
 * Images  
   
-**Intro**
+## Description 
   
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
+This site is a blog where users can upload interesting photos and interact with other posts that they come across. It allows for an online connection between users who like the same type of things, connecting over photos of similar interests. 
   
-**Figma**  
+## Figma
   
 * [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
   
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+## Deployment
+ 
+ This webpage has been deployed to github pages.
+ https://github.com/maxsharp13/se_project_spots 
+Below is a walkthrough explaining the project.
+https://drive.google.com/file/d/1cIrVORwwnQnR4DIKbdzsrZx0CigGPzLy/view?usp=drive_link
