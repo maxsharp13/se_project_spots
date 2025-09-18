@@ -17,7 +17,7 @@ This site is a blog where users can upload interesting photos and interact with 
 ## Deployment
  
  This webpage has been deployed to github pages.
- https://github.com/maxsharp13/se_project_spots 
+https://maxsharp13.github.io/se_project_spots/
 
 Below is a walkthrough explaining the project.
 https://drive.google.com/file/d/1cIrVORwwnQnR4DIKbdzsrZx0CigGPzLy/view?usp=drive_link
