@@ -125,23 +125,31 @@
         <p class="footer__text">2024 © SPOTS</p>
       </footer>
     </div>
-    <div class="modal">
+
+    <div class="modal modal_type_edit-profile">
       <div class="modal__container">
-        <button class="modal__close-button" type="button"></button>
-        <h2 class="modal__title">Edit Profile</h2>
-
+        <div class="modal__row">
+          <h2 class="modal__title">Edit Profile</h2>
+          <button class="modal__close-button" type="button"></button>
+        </div>
         <form class="modal__form">
-          <label class="modal__label">
-            Name
-            <input class="modal__input" type="text" name="name" placeholder="Name">
-          </label>
+          <input type="text" class="modal__input" placeholder="Name">
+          <input type="text" class="modal__input" placeholder="Description">
+          <button type="submit" class="modal__save-button">Save</button>
+        </form>
+      </div>
+    </div>
 
-          <label class="modal__label">
-            Description
-            <input class="modal__input" type="text" name="description" placeholder="Description">
-          </label>
-
-          <button class="modal__button" type="submit">Save</button>
+    <div class="modal modal_type_new-post">
+      <div class="modal__container">
+        <div class="modal__row">
+          <h2 class="modal__title">New Post</h2>
+          <button class="modal__close-button" type="button"></button>
+        </div>
+        <form class="modal__form">
+          <input type="text" class="modal__input" placeholder="Title">
+          <input type="url" class="modal__input" placeholder="Image URL">
+          <button type="submit" class="modal__save-button">Save</button>
         </form>
       </div>
     </div>
