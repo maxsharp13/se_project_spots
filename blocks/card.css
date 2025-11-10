@@ -36,6 +36,7 @@
 }
 
 .card__like-button {
+  padding: 0;
   border: none;
   cursor: pointer;
   font-size: 18px;

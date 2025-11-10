@@ -34,7 +34,7 @@
   -webkit-box-orient: vertical;
 }
 
-.profile__about {
+.profile__description {
   font-size: 16px;
   line-height: 1.4;
   font-weight: 400;
@@ -95,7 +95,7 @@
   opacity: 1;
 }
 
-@media screen and (max-width: 629px) {
+@media screen and (max-width: 627px) {
   .profile {
     display: flex;
     flex-direction: column;
@@ -125,7 +125,7 @@
     margin: 0 0 6px;
   }
 
-  .profile__about {
+  .profile__description {
     text-align: center;
     margin: 0 0 32px;
   }

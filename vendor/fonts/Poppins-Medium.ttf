@@ -1,5 +1,6 @@
- font-family: "Poppins;
+@font-face {
+  font-family: "Poppins";
   font-style: normal;
-  font-weight:400
-  src: url(/Users/joshsharpnack/Downloads/Istok_Web,Poppins,Ubuntu/Poppins/Poppins-Medium.ttf") format("truetype);
-
+  font-weight: 500;
+  src: url("../vendor/fonts/Poppins-Medium.ttf") format("truetype");
+}

@@ -36,18 +36,18 @@
           <div class="profile__info">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
-            <button class="profile__edit-button">
+            <button type="button" class="profile__edit-button">
               <img src="images/Edit-Icon.svg" alt="edit icon" />
               Edit Profile
             </button>
           </div>
-          <button class="profile__add-button">
+          <button type="button" class="profile__add-button">
             <img src="images/Plus-icon.svg" alt="plus icon" />
             New Post
           </button>
         </section>
 
-        <section class="cards">
+        <section class="cards page__section">
           <ul class="cards__list">
             <li class="card">
               <img
@@ -57,7 +57,11 @@
               />
               <div class="card__content">
                 <h3 class="card__title">Val Thorens</h3>
-                <button class="card__like-button"></button>
+                <button
+                  type="button"
+                  class="card__like-button"
+                  aria-label="Like card"
+                ></button>
               </div>
             </li>
             <li class="card">
@@ -68,7 +72,11 @@
               />
               <div class="card__content">
                 <h3 class="card__title">Restaurant terrace</h3>
-                <button class="card__like-button"></button>
+                <button
+                  type="button"
+                  class="card__like-button"
+                  aria-label="Like card"
+                ></button>
               </div>
             </li>
             <li class="card">
@@ -79,42 +87,58 @@
               />
               <div class="card__content">
                 <h3 class="card__title">An outdoor cafe</h3>
-                <button class="card__like-button"></button>
+                <button
+                  type="button"
+                  class="card__like-button"
+                  aria-label="Like card"
+                ></button>
               </div>
             </li>
             <li class="card">
               <img
                 src="images/4-photo-by-maurice-laschet-from-pexels.jpg"
-                alt="long bridge"
+                alt="Long bridge"
                 class="card__image"
               />
               <div class="card__content">
                 <h3 class="card__title">
                   A very long bridge over the forest
                 </h3>
-                <button class="card__like-button"></button>
+                <button
+                  type="button"
+                  class="card__like-button"
+                  aria-label="Like card"
+                ></button>
               </div>
             </li>
             <li class="card">
               <img
                 src="images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
-                alt="tunnel with light"
+                alt="Tunnel with light"
                 class="card__image"
               />
               <div class="card__content">
                 <h3 class="card__title">Tunnel with morning light</h3>
-                <button class="card__like-button"></button>
+                <button
+                  type="button"
+                  class="card__like-button"
+                  aria-label="Like card"
+                ></button>
               </div>
             </li>
             <li class="card">
               <img
                 src="images/6-photo-by-moritz-feldmann-from-pexels.jpg"
-                alt="mountain house"
+                alt="Mountain house"
                 class="card__image"
               />
               <div class="card__content">
                 <h3 class="card__title">Mountain house</h3>
-                <button class="card__like-button"></button>
+                <button
+                  type="button"
+                  class="card__like-button"
+                  aria-label="Like card"
+                ></button>
               </div>
             </li>
           </ul>
@@ -130,9 +154,15 @@
       <div class="modal__container">
         <div class="modal__row">
           <h2 class="modal__title">Edit Profile</h2>
-          <button class="modal__close-button" type="button"></button>
+          <button class="modal__close-button" type="button">
+            <img
+              src="images/Property 1=Default.png"
+              alt="Close modal"
+              class="modal__close-icon"
+            />
+          </button>
         </div>
-        <form class="form">
+        <form class="form modal__form">
           <input
             type="text"
             class="modal__input modal__input_type_name"
@@ -145,7 +175,12 @@
             placeholder="Description"
             required
           />
-          <button type="submit" class="modal__button modal__save-button">Save</button>
+          <button
+            type="submit"
+            class="modal__button modal__save-button"
+          >
+            Save
+          </button>
         </form>
       </div>
     </div>
@@ -154,9 +189,15 @@
       <div class="modal__container">
         <div class="modal__row">
           <h2 class="modal__title">New Post</h2>
-          <button class="modal__close-button" type="button"></button>
+          <button class="modal__close-button" type="button">
+            <img
+              src="images/Property 1=Default.png"
+              alt="Close modal"
+              class="modal__close-icon"
+            />
+          </button>
         </div>
-        <form class="form">
+        <form class="form modal__form">
           <input
             type="text"
             class="modal__input modal__input_type_title"
@@ -169,7 +210,12 @@
             placeholder="Image URL"
             required
           />
-          <button type="submit" class="modal__button modal__save-button">Save</button>
+          <button
+            type="submit"
+            class="modal__button modal__save-button"
+          >
+            Save
+          </button>
         </form>
       </div>
     </div>
