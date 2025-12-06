@@ -48,100 +48,7 @@
         </section>
 
         <section class="cards page__section">
-          <ul class="cards__list">
-            <li class="card">
-              <img
-                src="images/1-photo-by-moritz-feldmann-from-pexels.jpg"
-                alt="Val Thorens"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h3 class="card__title">Val Thorens</h3>
-                <button
-                  type="button"
-                  class="card__like-button"
-                  aria-label="Like card"
-                ></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="images/2-photo-by-ceiline-from-pexels.jpg"
-                alt="Restaurant terrace"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h3 class="card__title">Restaurant terrace</h3>
-                <button
-                  type="button"
-                  class="card__like-button"
-                  aria-label="Like card"
-                ></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="images/3-photo-by-tubanur-dogan-from-pexels.jpg"
-                alt="Outdoor cafe"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h3 class="card__title">An outdoor cafe</h3>
-                <button
-                  type="button"
-                  class="card__like-button"
-                  aria-label="Like card"
-                ></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="images/4-photo-by-maurice-laschet-from-pexels.jpg"
-                alt="Long bridge"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h3 class="card__title">
-                  A very long bridge over the forest
-                </h3>
-                <button
-                  type="button"
-                  class="card__like-button"
-                  aria-label="Like card"
-                ></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
-                alt="Tunnel with light"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h3 class="card__title">Tunnel with morning light</h3>
-                <button
-                  type="button"
-                  class="card__like-button"
-                  aria-label="Like card"
-                ></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="images/6-photo-by-moritz-feldmann-from-pexels.jpg"
-                alt="Mountain house"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h3 class="card__title">Mountain house</h3>
-                <button
-                  type="button"
-                  class="card__like-button"
-                  aria-label="Like card"
-                ></button>
-              </div>
-            </li>
-          </ul>
+          <ul class="cards__list"></ul>
         </section>
       </main>
 
@@ -150,12 +57,25 @@
       </footer>
     </div>
 
+    <template id="card-template">
+      <li class="card">
+        <img class="card__image" />
+        <div class="card__content">
+          <h3 class="card__title"></h3>
+          <button
+            type="button"
+            class="card__like-button"
+            aria-label="Like card"
+          ></button>
+        </div>
+      </li>
+    </template>
+
     <div class="modal modal_type_edit-profile" id="edit-profile-modal">
       <div class="modal__container">
         <div class="modal__row">
           <h2 class="modal__title">Edit Profile</h2>
-          <button class="modal__close-button" type="button">
-          </button>
+          <button class="modal__close-button" type="button"></button>
         </div>
         <form class="form modal__form">
           <input
@@ -184,8 +104,7 @@
       <div class="modal__container">
         <div class="modal__row">
           <h2 class="modal__title">New Post</h2>
-          <button class="modal__close-button" type="button">
-          </button>
+          <button class="modal__close-button" type="button"></button>
         </div>
         <form class="form modal__form">
           <input
@@ -207,6 +126,14 @@
             Save
           </button>
         </form>
+      </div>
+    </div>
+
+    <div class="modal modal_type_preview" id="preview-image-modal">
+      <div class="modal__container">
+        <button class="modal__close-button" type="button"></button>
+        <img class="modal__image" src="" alt="" />
+        <p class="modal__caption"></p>
       </div>
     </div>
 
