@@ -92,5 +92,5 @@
 
 .card__like-button_is-active {
   opacity: 1;
-  background-image: url("../images/State=Liked.svg");
+  background-image: url("../images/Union.svg")
 }

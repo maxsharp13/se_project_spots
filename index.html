@@ -78,17 +78,23 @@
         <button class="modal__close-button" type="button"></button>
 
         <h2 class="modal__title">Edit Profile</h2>
+
         <form class="form modal__form">
+          <label class="modal__label" for="profile-name">Name</label>
           <input
+            id="profile-name"
             type="text"
             class="modal__input modal__input_type_name"
-            placeholder="Name"
+            placeholder="Type your name"
             required
           />
+
+          <label class="modal__label" for="profile-description">Description</label>
           <input
+            id="profile-description"
             type="text"
             class="modal__input modal__input_type_description"
-            placeholder="Description"
+            placeholder="Describe yourself"
             required
           />
 
@@ -102,21 +108,21 @@
         <button class="modal__close-button" type="button"></button>
 
         <h2 class="modal__title">New Post</h2>
-        <form class="form modal__form">
 
-          <label for="post-title" class="modal__label">Title</label>
+        <form class="form modal__form">
+          <label for="post-title" class="modal__label">Image link</label>
           <input
             type="text"
             class="modal__input modal__input_type_title"
-            placeholder="Title"
+            placeholder="Paste a link to the picture"
             required
           />
 
-          <label for="post-url" class="modal__label">Image URL</label>
+          <label for="post-url" class="modal__label">Caption</label>
           <input
             type="url"
             class="modal__input modal__input_type_link"
-            placeholder="Image URL"
+            placeholder="Type your caption"
             required
           />
 

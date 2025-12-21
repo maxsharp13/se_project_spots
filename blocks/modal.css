@@ -20,27 +20,28 @@
 
 .modal__container {
   background-color: #fff;
-  padding: 36px;
   border-radius: 10px;
   width: 100%;
   max-width: 730px;
+  padding: 32px 50px;
   position: relative;
   box-sizing: border-box;
 }
 
 .modal__close-button {
   position: absolute;
-  top: 81px;
-  left: 956px;
+  top: 16px;
+  right: 16px;
   width: 40px;
   height: 40px;
-  background-image: url("../images/Property 1=Variant3.svg");
+  background-image: url("../images/Property 1=Default (2).svg");
+  background-repeat: no-repeat;
   background-position: center;
   background-size: 24px;
-  background-repeat: no-repeat;
   background-color: transparent;
   border: none;
   cursor: pointer;
+
 }
 
 .modal__close-button:hover {
@@ -53,24 +54,33 @@
   margin: 0 0 34px;
 }
 
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+}
+
 .modal__input {
+  width: 100%;
+  max-width: 630px;
   box-sizing: border-box;
-  margin-bottom: 24px;
   padding: 22px 12px 12px;
   border: 1px solid #0002;
   border-radius: 8px;
-  width: 156px;
   font-size: 20px;
 }
 
 .modal__button {
-  width: 100%;
   background-color: #000;
   color: #fff;
   cursor: pointer;
   border-radius: 8px;
-  transition: background-color 0.3s ease;
-  padding: 18px;
+  border: none;
+  padding: 12px 32px;
+  font-size: 16px;
+  width: auto;
+  display: inline-block;
 }
 
 .modal__button:hover {
@@ -101,27 +111,32 @@
 }
 
 .modal__caption {
-  margin: 0;
+  margin-top: 10px;
   padding: 4px 8px;
   font-size: 20px;
   font-weight: 500;
-  line-height: 24px;
   color: #fff;
-  position: absolute;
   background-color: #212121;
   border-radius: 8px;
-  left: 0;
-  top: calc(100% + 10px);
+  text-align: center;
+  display: inline-block;
+  width: auto;
 }
 
 .modal__close-button_type_preview {
   position: absolute;
-  top: -40px;
-  right: -40px;
+  top: -50px;
+  left: 956px;
+  width: 40px;
+  height: 40px;
   background-image: url("../images/Property 1=Variant3.svg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 24px;
+  border: none;
+  background-color: transparent;
   cursor: pointer;
+  z-index: 10;
 }
 
 @media screen and (max-width: 627px) {
@@ -133,10 +148,6 @@
   .modal__title {
     font-size: 18px;
     margin-bottom: 20px;
-  }
-
-  .modal__image {
-    max-width: none;
   }
 
   .modal__caption {
