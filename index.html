@@ -110,18 +110,21 @@
         <h2 class="modal__title">New Post</h2>
 
         <form class="form modal__form">
-          <label for="post-title" class="modal__label">Image link</label>
+
+          <label for="post-url" class="modal__label">Image link</label>
           <input
-            type="text"
-            class="modal__input modal__input_type_title"
+            id="post-url"
+            type="url"
+            class="modal__input modal__input_type_link"
             placeholder="Paste a link to the picture"
             required
           />
 
-          <label for="post-url" class="modal__label">Caption</label>
+          <label for="post-caption" class="modal__label">Caption</label>
           <input
-            type="url"
-            class="modal__input modal__input_type_link"
+            id="post-caption"
+            type="text"
+            class="modal__input modal__input_type_title"
             placeholder="Type your caption"
             required
           />
