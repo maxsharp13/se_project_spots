@@ -3,35 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Interactive social media app for sharing photos." />
+    <meta
+      name="description"
+      content="Interactive social media app for sharing photos."
+    />
     <meta name="author" content="Max Sharpnack" />
     <title>Max's Spots</title>
-    <link rel="stylesheet" href="pages/index.css" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   </head>
 
   <body>
     <div class="page">
       <header class="header">
-        <img class="header__logo" src="images/Logo.svg" alt="Spots logo" />
+        <img class="header__logo" alt="Spots logo" />
       </header>
 
       <main class="content">
         <section class="profile page__section">
-          <img src="images/avatar.jpg" alt="User avatar" class="profile__avatar" />
+          <div class="profile__avatar-container">
+            <img class="profile__avatar" alt="User avatar" />
+            <button
+              type="button"
+              class="profile__avatar-button"
+              aria-label="Edit avatar"
+            ></button>
+          </div>
 
           <div class="profile__info">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
 
             <button type="button" class="profile__edit-button">
-              <img src="images/Edit-Icon.svg" alt="Edit icon" />
+              <img alt="Edit icon" />
               Edit Profile
             </button>
           </div>
 
           <button type="button" class="profile__add-button">
-            <img src="images/Plus-icon.svg" alt="Plus icon" />
+            <img alt="Plus icon" />
             New Post
           </button>
         </section>
@@ -48,12 +56,20 @@
 
     <template id="card-template">
       <li class="card">
-        <img class="card__image" src="#" alt="" />
-        <button type="button" class="card__delete-button" aria-label="Delete card"></button>
+        <img class="card__image" alt="" />
+        <button
+          type="button"
+          class="card__delete-button"
+          aria-label="Delete card"
+        ></button>
 
         <div class="card__content">
           <h3 class="card__title"></h3>
-          <button type="button" class="card__like-button" aria-label="Like card"></button>
+          <button
+            type="button"
+            class="card__like-button"
+            aria-label="Like card"
+          ></button>
         </div>
       </li>
     </template>
@@ -68,6 +84,7 @@
           <label class="modal__label" for="profile-name">Name</label>
           <input
             id="profile-name"
+            name="profile-name"
             type="text"
             class="modal__input modal__input_type_name"
             required
@@ -76,9 +93,12 @@
           />
           <span class="modal__error profile-name-error"></span>
 
-          <label class="modal__label" for="profile-description">Description</label>
+          <label class="modal__label" for="profile-description">
+            Description
+          </label>
           <input
             id="profile-description"
+            name="profile-description"
             type="text"
             class="modal__input modal__input_type_description"
             required
@@ -87,7 +107,11 @@
           />
           <span class="modal__error profile-description-error"></span>
 
-          <button type="submit" class="modal__button modal__button_disabled">
+          <button
+            type="submit"
+            class="modal__button modal__button_disabled"
+            disabled
+          >
             Save
           </button>
         </form>
@@ -104,6 +128,7 @@
           <label class="modal__label" for="post-url">Image link</label>
           <input
             id="post-url"
+            name="post-url"
             type="url"
             class="modal__input modal__input_type_link"
             required
@@ -113,6 +138,7 @@
           <label class="modal__label" for="post-caption">Caption</label>
           <input
             id="post-caption"
+            name="post-caption"
             type="text"
             class="modal__input modal__input_type_title"
             required
@@ -121,7 +147,11 @@
           />
           <span class="modal__error post-caption-error"></span>
 
-          <button type="submit" class="modal__button modal__button_disabled">
+          <button
+            type="submit"
+            class="modal__button modal__button_disabled"
+            disabled
+          >
             Save
           </button>
         </form>
@@ -130,13 +160,55 @@
 
     <div class="modal modal_type_preview" id="preview-modal">
       <figure class="modal__preview-container">
-        <button class="modal__close-button modal__close-button_type_preview"></button>
-        <img class="modal__image" src="#" alt="Preview image" />
+        <button
+          class="modal__close-button modal__close-button_type_preview"
+          type="button"
+        ></button>
+        <img class="modal__image" alt="Preview image" />
         <figcaption class="modal__caption"></figcaption>
       </figure>
     </div>
 
-    <script src="scripts/validation.js"></script>
-    <script src="scripts/index.js"></script>
+    <div class="modal" id="delete-confirm-modal">
+      <div class="modal__container">
+        <button class="modal__close-button" type="button"></button>
+
+        <h2 class="modal__title">Are you sure?</h2>
+
+        <form class="modal__form">
+          <button type="submit" class="modal__button">
+            Yes
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal" id="avatar-modal">
+      <div class="modal__container">
+        <button class="modal__close-button" type="button"></button>
+
+        <h2 class="modal__title">Change profile picture</h2>
+
+        <form class="modal__form" novalidate>
+          <label class="modal__label" for="avatar-link">Image link</label>
+          <input
+            id="avatar-link"
+            name="avatar-link"
+            type="url"
+            class="modal__input modal__input_type_avatar"
+            required
+          />
+          <span class="modal__error avatar-link-error"></span>
+
+          <button
+            type="submit"
+            class="modal__button modal__button_disabled"
+            disabled
+          >
+            Save
+          </button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
