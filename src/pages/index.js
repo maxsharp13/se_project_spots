@@ -2,7 +2,6 @@ import "./index.css";
 import Api from "../utils/Api";
 import { enableValidation, resetValidation, settings } from "../scripts/validation.js";
 
-// local images (webpack will bundle them)
 import logo from "../images/Logo.svg";
 import avatar from "../images/avatar.jpg";
 import editIcon from "../images/Edit-Icon.svg";
@@ -44,7 +43,6 @@ const initialCards = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
-  // ---- Set header/profile button images (these are empty <img> tags in HTML) ----
   const headerLogo = document.querySelector(".header__logo");
   const profileAvatar = document.querySelector(".profile__avatar");
   const editBtnIcon = document.querySelector(".profile__edit-button img");
@@ -67,10 +65,8 @@ document.addEventListener("DOMContentLoaded", () => {
     addBtnIcon.alt = "Plus icon";
   }
 
-  // ---- Validation ----
   enableValidation(settings);
 
-  // ---- DOM references (guarded so JS doesn't crash) ----
   const cardsList = document.querySelector(".cards__list");
   const template = document.querySelector("#card-template");
   const cardTemplate = template?.content?.querySelector(".card");
@@ -88,13 +84,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const previewImage = previewModal?.querySelector(".modal__image");
   const previewCaption = previewModal?.querySelector(".modal__caption");
 
-  // If the template or cards container is missing, stop early (but don't crash)
   if (!cardsList || !cardTemplate) {
     console.error("Missing .cards__list or #card-template in HTML");
     return;
   }
 
-  // ---- Modal helpers (ESC + overlay) ----
   function handleEscClose(evt) {
     if (evt.key === "Escape") {
       const openedModal = document.querySelector(".modal_is-opened");
@@ -135,7 +129,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     title.textContent = data.name;
 
-    // IMPORTANT: set image.src so it actually loads
     image.src = data.link;
     image.alt = data.name;
 
@@ -193,7 +186,6 @@ document.addEventListener("DOMContentLoaded", () => {
     closeModal(editProfileModal);
   });
 
-  // ---- New post ----
   const addBtn = document.querySelector(".profile__add-button");
   addBtn?.addEventListener("click", () => {
     if (!newPostForm) return;
