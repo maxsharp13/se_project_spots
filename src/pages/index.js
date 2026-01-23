@@ -99,15 +99,19 @@ function handleAvatarSubmit(evt) {
   submitBtn.textContent = "Saving...";
 
   api
-    .updateAvatar({ avatar: avatarForm.elements["avatar-link"].value })
-    .then((user) => {
-      profileAvatar.src = user.avatar;
-      closeModal(avatarModal);
-    })
-    .catch(console.error)
-    .finally(() => {
-      submitBtn.textContent = "Save";
-    });
+  .updateAvatar({ avatar: avatarForm.elements["avatar-link"].value })
+  .then((user) => {
+    profileAvatar.src = user.avatar;
+
+    avatarForm.reset();
+    resetValidation(avatarForm, settings);
+
+    closeModal(avatarModal);
+  })
+  .catch(console.error)
+  .finally(() => {
+    submitBtn.textContent = "Save";
+  });
 }
 
 function createCard(data) {
@@ -191,7 +195,6 @@ editProfileForm.addEventListener("submit", (evt) => {
 });
 
 document.querySelector(".profile__add-button").addEventListener("click", () => {
-  resetValidation(newPostForm, settings);
   openModal(newPostModal);
 });
 
@@ -234,7 +237,6 @@ deleteForm.addEventListener("submit", (evt) => {
 });
 
 avatarButton.addEventListener("click", () => {
-  resetValidation(avatarForm, settings);
   openModal(avatarModal);
 });
 
