@@ -5,6 +5,11 @@
   border-bottom: 1px solid #21212166;
 }
 
+
+.profile__avatar-container {
+  position: relative;
+}
+
 .profile__avatar {
   margin-right: 20px;
   width: 190px;
@@ -12,6 +17,26 @@
   border-radius: 8px;
   object-fit: cover;
 }
+
+.profile__avatar-button {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.6)
+    url("../images/Edit-Icon.svg") center / 26px 26px no-repeat;
+
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.profile__avatar-container:hover .profile__avatar-button {
+  opacity: 1;
+}
+
 
 .profile__info {
   display: flex;
@@ -47,6 +72,7 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
+
 
 .profile__add-button {
   display: flex;
@@ -95,6 +121,7 @@
   opacity: 1;
 }
 
+
 @media screen and (max-width: 627px) {
   .profile {
     display: flex;
@@ -112,6 +139,10 @@
     height: 80px;
     margin-left: 0;
     margin: 0 0 12px 0;
+  }
+
+  .profile__avatar-button {
+    opacity: 1;
   }
 
   .profile__info {
